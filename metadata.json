@@ -1,0 +1,6 @@
+{
+  "name": "OmniTicket Distributed Ticketing Platform",
+  "description": "Event-driven online ticketing platform for concerts, theaters, and sports with physical terminal tracking, dynamic pricing policies, live seat reservation, and sales analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

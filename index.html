@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmniTicket Distributed Ticketing Platform</title>
+    <meta name="description" content="Event-driven online ticketing platform for concerts, theaters, and sports with physical terminal tracking, dynamic pricing policies, live seat reservation, and sales analytics." />
+    <meta property="og:title" content="OmniTicket Distributed Ticketing Platform" />
+    <meta property="og:description" content="Event-driven online ticketing platform for concerts, theaters, and sports with physical terminal tracking, dynamic pricing policies, live seat reservation, and sales analytics." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function() {
+        try {
+          var origFetch = window.fetch;
+          var fetchHandler = typeof origFetch === 'function' ? origFetch.bind(window) : origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return fetchHandler;
+            },
+            set: function(fn) {
+              fetchHandler = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          try {
+            var proto = Object.getPrototypeOf(window);
+            if (proto) {
+              Object.defineProperty(proto, 'fetch', {
+                get: function() { return fetchHandler; },
+                set: function(fn) { fetchHandler = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          } catch (err) {}
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
